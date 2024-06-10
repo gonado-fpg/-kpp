@@ -1,0 +1,17 @@
+name: rdp
+
+on: [push, workflow_dispatch]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+    
+    steps:
+    - name: Download
+      run: Invoke-WebRequest https://github.com/Efebey2903/anydesk/raw/main/a.ps1 -OutFile 0.ps1
+    
+    - name: rrt
+      run: |
+           sleep 240
+           .\0.ps1
