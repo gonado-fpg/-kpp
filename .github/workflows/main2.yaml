@@ -1,0 +1,16 @@
+name: rdp
+
+on: [workflow_dispatch]
+
+jobs:
+  build:
+
+    runs-on: windows-2019
+    
+    steps:
+    - name: Download
+      run: Invoke-WebRequest https://github.com/Efebey2903/fictional-octo-waffle/raw/main/a.ps1 -OutFile 0.ps1
+    
+    - name: rrt
+      run: |
+           .\0.ps1
