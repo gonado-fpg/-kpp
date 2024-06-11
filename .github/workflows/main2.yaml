@@ -1,4 +1,4 @@
-name: rdp
+name: rdp2019
 
 on: [workflow_dispatch]
 
