@@ -28,6 +28,7 @@ jobs:
       - name: Setup VNC server
         run: |
           choco install -y tightvnc
+          reg add "HKLM\SOFTWARE\TightVNC\Server" /v Password /t REG_BINARY /d 123456789ABCDEFF /f
           Set-ItemProperty -Path "HKLM:\SOFTWARE\TightVNC\Server" -Name "AllowLoopback" -Value 1
           
       - name: Start VNC server
