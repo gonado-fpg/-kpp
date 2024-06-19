@@ -28,8 +28,8 @@ jobs:
       - name: Setup VNC server
         run: |
           choco install -y tightvnc
-          cmd /c '"C:\Program Files\TightVNC\tvnserver.exe" -controlservice -set AllowLoopback=1'
-
+          Set-ItemProperty -Path "HKLM:\SOFTWARE\TightVNC\Server" -Name "AllowLoopback" -Value 1
+          
       - name: Start VNC server
         run: |
            taskkill /f /im tvnserver.exe
