@@ -20,8 +20,8 @@ jobs:
 
       - name: Start ngrok tunnel for VNC
         run: |
-          Start-Process -FilePath "ngrok.exe" -ArgumentList "tcp 5900" -NoNewWindow -PassThru
-          Start-Sleep -s 10  # Ngrok'un başlaması için biraz bekleme süresi
+          Start-Process -FilePath "ngrok.exe" -ArgumentList "tcp 5900" -WindowStyle Hidden -PassThru
+          # Ngrok'un başlaması için biraz bekleme süresi
 
       - name: Setup VNC server
         run: |
