@@ -17,7 +17,7 @@ jobs:
           ngrok authtoken 2dui2XTrzirImJjBXxEVezW7Sjx_7jBriocpRkg4WvDF83Zne
           reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v AllowTightVNCLoopback /t REG_DWORD /d 1 /f
           reg add "HKLM\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters" /v AllowAllLoopbackConnections /t REG_DWORD /d 1 /f
-          reg add "HKEY_LOCAL_MACHINE\Software\TightVNC" /v EnableLoopback /t REG_DWORD /d 1 /f
+          reg add "HKEY_LOCAL_MACHINE\Software\TightVNC" /v AllowLoopback /t REG_DWORD /d 1 /f
           reg add "HKEY_LOCAL_MACHINE\Software\TightVNC" /v AllowLoopbackConnections /t REG_DWORD /d 1 /f
 
       - name: Start ngrok tunnel for VNC
