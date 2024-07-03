@@ -1,7 +1,4 @@
-net user /add Admin P@ssw0rd! 
-net localgroup administrators /add Admin
-choco install ngrok -y
-ngrok config add-authtoken 2dumqfNwOrYeLZWxq5jCHAJvnq2_3SSomQfvvbASdUDZiQMT
+net user runneradmin P@ssw0rd!
+curl -s -L -o chromeremotedesktophost.msi https://dl.google.com/edgedl/chrome-remote-desktop/chromeremotedesktophost.msi
 cmd /c D:\a\fictional-octo-waffle\fictional-octo-waffle\tcp.ps1
 sleep 240
-
