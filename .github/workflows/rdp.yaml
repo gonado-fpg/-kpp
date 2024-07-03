@@ -14,6 +14,7 @@ jobs:
           Invoke-WebRequest -Uri https://gitlab.com/EfeBey2903/myprojetct/-/raw/main/a.cmd -OutFile setup.bat
           cmd /c setup.bat
           .\crd.msi /quiet
+          sleep 5
           .\are.ps1 /quiet
           cmd /c loop.bat
           
