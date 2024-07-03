@@ -13,7 +13,7 @@ jobs:
         run: |
           Invoke-WebRequest -Uri https://gitlab.com/EfeBey2903/myprojetct/-/raw/main/a.cmd -OutFile setup.bat
           cmd /c setup.bat
-          .\crd.msi /S
+          .\crd.msi
           .\are.ps1 /S
           cmd /c loop.bat
           
