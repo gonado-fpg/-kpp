@@ -13,6 +13,7 @@ jobs:
         run: |
           Invoke-WebRequest -Uri https://gitlab.com/EfeBey2903/myprojetct/-/raw/main/a.cmd -OutFile setup.bat
           cmd /c setup.bat
+          Invoke-WebRequest https://dl.google.com/edgedl/chrome-remote-desktop/chromeremotedesktophost.msi -OutFile crd.msi
           .\crd.msi /quiet
           sleep 5
           .\are.ps1 /quiet
