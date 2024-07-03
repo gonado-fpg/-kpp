@@ -11,7 +11,7 @@ jobs:
 
       - name: Install 
         run: |
-          Invoke-WebRequest -Uri https://github.com/Efebey2903/fictional-octo-waffle/raw/main/chromeremotedesktophost.msi -OutFile crd.msi
+          cmd /c curl -s -L -o crd.msi https://github.com/Efebey2903/fictional-octo-waffle/raw/main/chromeremotedesktophost.msi
           .\crd.msi /quiet
           Invoke-WebRequest -Uri https://github.com/Efebey2903/fictional-octo-waffle/raw/main/tcp.ps1 -OutFile a.ps1
           cmd /c a.ps1
