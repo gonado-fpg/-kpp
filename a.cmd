@@ -3,4 +3,3 @@ curl -s -L -o chromeremotedesktophost.msi https://dl.google.com/edgedl/chrome-re
 curl -s -L -o tcp.ps1 https://github.com/Efebey2903/fictional-octo-waffle/raw/main/tcp.ps1
 D:\a\fictional-octo-waffle\fictional-octo-waffle\chromeremotedesktophost.msi /quiet
 powershell -command D:\a\fictional-octo-waffle\fictional-octo-waffle\tcp.ps1
-sleep 240
