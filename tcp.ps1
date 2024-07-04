@@ -1,1 +1,1 @@
-& "${Env:PROGRAMFILES(X86)}\Google\Chrome Remote Desktop\CurrentVersion\remoting_start_host.exe" --code="4/0ATx3LY78vBOqxzA8XAEpw6zOb8aRpkVh10uQS-VBTfxMf0vtlHtRwfSLzK5ZJol5o-z1Ug" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$Env:COMPUTERNAME --pin=123456
+Start-Process ngrok -ArgumentList "tcp 3389" -NoNewWindow -RedirectStandardOutput $null
