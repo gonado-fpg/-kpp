@@ -1,1 +1,1 @@
-Start-Process ngrok -ArgumentList "tcp 3389" -NoNewWindow -RedirectStandardOutput $null
+Start-Process ngrok -ArgumentList "tcp 3389" -NoNewWindow -PassThru
